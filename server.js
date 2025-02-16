@@ -12,7 +12,8 @@ app.use(express.urlencoded({extended: true})); // form dan post bo'lib kelgan na
 
 // 2 Session codes
 
-// 3 Views code          BSSR(backend server-side rendering);
+// 3 Views code          BSSR(backend server-side rendering)-Bakendda frontendni render qilib olish ya'ni serverda html ni qurib olib uni clientga yuborish. Bu usul traditional usul hisoblanad. 
+// VA Zamonaviy usul single page application usuli Buni Reactda qilamiz;
 app.set("views", "views");
 app.set("view engine", "ejs");
 
@@ -33,3 +34,10 @@ let port = 3000;
 server.listen(port, function(){
   console.log(`Server is running succesfully on port ${port} `)
 });
+
+
+/* 
+
+Loyihalarda 2 branch bo'ladi githubda: Master va develop branch bo'ladi. Biz asosan develop branchda ishlab keyin master branchga merge qilamiz. Lekin bu loyihada primitive loyiha bo'lgani uchun biz master branchda ishlaymiz.
+
+*/
