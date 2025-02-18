@@ -19,13 +19,23 @@ app.set("view engine", "ejs");
 
 
 // 4 Routing codes
-app.get("/hello", function(req, res){
-  res.end("HELLO WORLD HERE");
-});
+app.post("/create-item", function(req, res){
+  console.log(req.body);
+  res.json({test:"success"});
+})
 
-app.get("/gift", function(req, res){
-  res.end("Siz sovgalar sahifasidasiz!");
-});
+app.get("/", function(req, res){
+    res.render("harid");
+})
+
+
+// app.get("/hello", function(req, res){
+//   res.end("HELLO WORLD HERE");
+// });
+
+// app.get("/gift", function(req, res){
+//   res.end("Siz sovgalar sahifasidasiz!");
+// });
 
 
 
