@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REJA</title>
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
-    /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/ceb85b6976.js" crossorigin="anonymous"></script>
+    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ceb85b6976.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="../public/main.css">
 
     <style>
@@ -118,16 +118,26 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-bottom: 20px;
 
   .languages_flex{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .lang, .lang_pro{
     font-size: 15px;
     color: #767676;
+    width: 50%;
+  }
+
+  .lang_pro{
+    text-align: right;
+  }
+  .lang-progress{
+    width: 100%;
   }
 }
 
@@ -137,17 +147,27 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-bottom: 20px;
 
 
   .languages_flex{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .lang, .lang_pro{
     font-size: 15px;
     color: #767676;
+    width: 50%;
+  }
+
+  .lang_pro{
+    text-align: right;
+  }
+  .lang-progress{
+    width: 100%;
   }
 }
 
@@ -336,6 +356,8 @@
   }
 }
 
+
+
     </style>
   </head>
     
@@ -390,19 +412,38 @@
 
           <div class="languages">
             <div style="font-size:18px; font-weight:bolder; margin-bottom: 5px;">Languages</div>
+            
             <div class="languages_flex">
               <div class="lang">Uzbek</div>
               <div class="lang_pro">100%</div>
+              <!-- Progress -->
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 100%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- Progress -->
             </div>
+            
+            
 
             <div class="languages_flex">
               <div class="lang">English</div>
               <div class="lang_pro">80%</div>
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 80%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
             </div>
 
             <div class="languages_flex">
               <div class="lang">Korean</div>
               <div class="lang_pro">70%</div>
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 70%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
             </div>
           </div>
           <hr class="marginer">
@@ -413,26 +454,56 @@
             <div class="languages_flex">
               <div class="lang">Html</div>
               <div class="lang_pro">100%</div>
+              <!-- Progress -->
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 100%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- Progress -->
             </div>
 
             <div class="languages_flex">
               <div class="lang">Css</div>
               <div class="lang_pro">80%</div>
+              <!-- Progress -->
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 80%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- Progress -->
             </div>
 
             <div class="languages_flex">
               <div class="lang">Js</div>
-              <div class="lang_pro">70%</div>
+              <div class="lang_pro">80%</div>
+              <!-- Progress -->
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 80%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- Progress -->
             </div>
             
             <div class="languages_flex">
               <div class="lang">PHP</div>
-              <div class="lang_pro">90%</div>
+              <div class="lang_pro">70%</div>
+              <!-- Progress -->
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 70%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- Progress -->
             </div>
 
             <div class="languages_flex">
               <div class="lang">Wordpress</div>
               <div class="lang_pro">70%</div>
+              <!-- Progress -->
+              <div class="lang-progress">
+                <div class="progress" style="height: 7px; border: solid 0.5px #FFB400; padding: 1px; background-color: white;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 70%; border-radius: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- Progress -->
             </div>
           </div>
           <hr class="marginer">
@@ -542,8 +613,8 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </body>
 </html>
