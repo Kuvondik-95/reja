@@ -10,355 +10,10 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/ceb85b6976.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="../public/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ceb85b6976.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
 
-    <style>
-      body{
-        font-family: Arial;
-      }
-
-        .hero{
-  width: 1440px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-}
-
-
-/* style for left form */
-.left_form{
-  width: 305px;
-  height: 1315px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-.job{
-  width: 228px;
-  height: 223px; 
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 4px;
-
-  .person_image{
-    width: 156px;
-    height: 135px;
-    border-radius: 50%;
-  }
-
-  .person_name{
-    font-size: 18px;
-  }
-
-  .person_job{
-    font-size: 15px;
-    color: gray;
-  }
-
-  .social_icons{
-    width: 100%;
-    margin-top: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-
-    i{
-      font-size: 24px;
-      color: #FFB400;
-    }
-  }
-
-
-}
-
-.short_info{
-  width: 221px;
-  height: 126px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-
-  .short_info_items{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-
-    .info_text{
-      background-color: #FFB400;
-      box-sizing: border-box;
-      padding: 3px;
-    }
-  }
-}
-
-
-
-
-
-
-
-.languages{
-  width: 220px;
-  height: 153px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-bottom: 20px;
-
-  .languages_flex{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .lang, .lang_pro{
-    font-size: 15px;
-    color: #767676;
-    width: 50%;
-  }
-
-  .lang_pro{
-    text-align: right;
-  }
-  .lang-progress{
-    width: 100%;
-  }
-}
-
-.skills{
-  width: 220px;
-  height: 242px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-bottom: 20px;
-
-
-  .languages_flex{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .lang, .lang_pro{
-    font-size: 15px;
-    color: #767676;
-    width: 50%;
-  }
-
-  .lang_pro{
-    text-align: right;
-  }
-  .lang-progress{
-    width: 100%;
-  }
-}
-
-.extra_skills{
-  width: 186px;
-  height: 148px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  
-
-    .extra{
-      color: #767676;
-      font-size: 15px;
-    }
-}
-
-.marginer{
-  margin: 25px 0px;
-  height: 2px;
-  width: 220px;
-  border: none;
-  background-color: #F0F0F6;
-}
-
-
-.middle_form{
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 34px;
-  padding-right: 22px;
-
-
-  .main{
-    height: 463px;
-    width: 100%;
-    background-color: white;
-    box-sizing: border-box;
-    padding-top: 50px;
-    padding-left: 56px;
-    padding-bottom:63px;
-    margin-bottom: 140px;
-    display: flex;
-    /* position: absolute; */
-
-    .main-text{
-      width: 50%;
-    }
-
-    h1{
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 10px; 
-    }
-
-    p{
-      font-size: 16px;
-      color: #767676;
-      width: 424px;
-      line-clamp: 3;
-      line-height: 24px;
-      margin-bottom: 22px;
-    }
-
-    .hire-btn{
-      background-color: #FFB400;
-      width: 154px;
-      height: 49px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      
-      /* i{
-        float: right;
-        margin-right: 10px;
-      } */
-    }
-
-
-    .main-images{
-      width: 50%;
-      position: relative;
-      
-      img{
-        width: 326px; 
-        height: 446px;
-        position: absolute;
-        top: -24px;
-        left: 40px;
-      }
-    }
-  }
-
-
-
-
-  .services{
-
-
-    h1{
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-    }
-    p{
-      font-size: 16px;
-      color: #767676;
-      text-align: center;
-      line-clamp: 2;
-      margin-bottom: 50px;
-    }
-
-    .services-flex{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-
-      .service-card{
-        width: 333px;
-        height: 225px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-
-        img{
-          width: 68px;
-          margin-bottom: 26px;
-        }
-        h3{
-          margin: 0;
-        }
-        p{
-          font-size: 16px;
-          color: #767676;
-          text-align: center;
-          margin-bottom: 0;
-        }
-
-        a{
-          color: #FFB400;
-          font-size:12px;
-          margin-top:10px;
-        }
-      }
-    }
-
-
-  }
-
-}
-
-.right_form{
-  width: 108px;
-  box-sizing: border-box;
-  background-color: white;
-
-  .menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 43px;
-
-    .icon-div-1{
-      margin-bottom: 174px;
-    }
-
-    .icon-div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 18px;
-      background-color: #E5E5E5;
-      cursor: pointer;
-    }
-    .icon-div:hover{
-      background-color: #FFB400;
-    }
-  }
-}
-
-
-
-    </style>
   </head>
     
   <body style="background-color: #E5E5E5; margin:0; padding: 0;">
@@ -370,10 +25,10 @@
         <div class="left_form">
           <div class="job">
             <div>
-              <img class="person_image" src="https://clipart-library.com/images_k/black-man-transparent/black-man-transparent-8.jpg" alt="">
+              <img class="person_image" src="/images/Profile.jpg" alt="">
             </div>
-            <div class="person_name">Marcos</div>
-            <div class="person_job">Heart</div>
+            <div class="person_name">Khalid</div>
+            <div class="person_job">Software Engineer</div>
             <div class="social_icons">
               <i class="fa-brands fa-facebook"></i>
               <i class="fa-brands fa-instagram"></i>
@@ -508,14 +163,6 @@
           </div>
           <hr class="marginer">
 
-
-
-
-
-
-
-
-
           <div class="extra_skills">
             <div style="font-size:18px !important; font-weight:bolder ; margin-bottom: 5px;">Extra skills</div>
             <div class="extra"><i class="fa-solid fa-file" style="float: left; color: #FFB400; margin-right: 8px;"></i> Bootstrap, Materialize</div>
@@ -538,7 +185,7 @@
             </div>
             
             <div class="main-images">
-              <img src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-in-shirt-smiles-and-gives-thumbs-up-to-show-approval-png-image_13146336.png" alt="">
+              <img src="/images/Your_img.png" alt="">
             </div>
             
             
@@ -551,37 +198,36 @@
             <div class="services-flex">
               
               <div class="service-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0KXcpQ7Qa8ovEaSw1f7YpF_K6mvaOR5wUsw&s" alt="">
+                <img src="/images/service/coding.svg" alt="">
                 <h3>Web Development</h3>
                 <p>Blog, E-commerce</p>
               </div>
               
               <div class="service-card">
-                <img src="https://static.vecteezy.com/system/resources/previews/027/915/422/non_2x/ux-ui-icon-free-vector.jpg" alt="">
+                <img src="/images/service/illustration.svg" alt="">
                 <h3>UI/UX design</h3>
                 <p>Mobile app, website design</p>
               </div>
               
               <div class="service-card">
-                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/sound-3d-icon-download-in-png-blend-fbx-gltf-file-formats--music-audio-speaker-volume-multimedia-general-ui-pack-user-interface-icons-5376635.png?f=webp" alt="">
+                <img src="/images/service/Microphone.png" alt="">
                 <h3>Sound Design</h3>
                 <p>Voice over, Beat Making</p>
               </div>
               
               <div class="service-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIqlfq6XF53n1MF8_Cq3MtR9yU94QxqkFSUg&s" alt="">
+                <img src="/images/service/game-development.png" alt="">
                 <h3>Game Design</h3>
                 <p>Character Design, Props & Objects</p>
               </div>
               
               <div class="service-card">
-                <img src="https://www.svgrepo.com/show/116752/film-camera.svg" alt="">
+                <img src="/images/service/Photographer.png" alt="">
                 <h3>Photography</h3>
                 <p>Portrait, Product Photography</p>
               </div>
               
               <div class="service-card">
-                <img src="./coding.svg" alt="">
                 <h3>Advertising</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p>
                 <a href="#" >ORDER NOW <i class="fa-solid fa-chevron-right"></i></a>
@@ -595,13 +241,33 @@
         
         <div class="right_form">
           <section class="menu">
-            <div class="icon-div icon-div-1"><i class="fa-solid fa-moon"></i></div>
-            <div class="icon-div"><i class="fa-solid fa-house"></i></div>
-            <div class="icon-div"><i class="fa-solid fa-code"></i></div>
-            <div class="icon-div"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div class="icon-div"><i class="fa-solid fa-briefcase"></i></div>
-            <div class="icon-div"><i class="fa-solid fa-address-card"></i></div>
-            <div class="icon-div"><i class="fa-solid fa-comment"></i></div>
+            <div class="icon-div icon-div-1"  data-toggle="tooltip" data-placement="top" title="Moon">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            
+            <div class="icon-div home-icon " data-toggle="tooltip" data-placement="top" title="Home">
+              <i class="fa-solid fa-house"></i>
+            </div>
+
+            <div class="icon-div"  data-toggle="tooltip" data-placement="top" title="Home">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            
+            <div class="icon-div" data-toggle="tooltip" data-placement="top" title="Graduation">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="icon-div"  data-toggle="tooltip" data-placement="top" title="Work">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div class="icon-div" data-toggle="tooltip" data-placement="top" title="Resume">
+              <i class="fa-solid fa-address-card"></i>
+            </div>
+            
+            <div class="icon-div" data-toggle="tooltip" data-placement="top" title="Contact">
+              <i class="fa-solid fa-comment"></i>
+            </div>
           </section>
         </div>
       </div>
@@ -616,5 +282,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })  
+    </script>
   </body>
 </html>

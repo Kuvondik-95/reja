@@ -7,7 +7,8 @@ const app = express(); // bu yerda express bizga object return qiladi.
 const http = require('http');
 
 // 1 Intro codes
-app.use(express.static("public"));  // public folderni clientlarga ochib berish(html, css va images)
+// app.use(express.static("public"));  // public folderni clientlarga ochib berish(html, css va images)
+app.use(express.static('./public'));
 app.use(express.json());            // REST API. brauzerdan kelayotgan json formatdagi ma'lumotni object ko'rinishiga o'tqazib beradi
 app.use(express.urlencoded({extended: true})); // TRADITIONAL API. form dan post bo'lib kelgan narsalarni expressda qabul qilish uchun yoziladi
 

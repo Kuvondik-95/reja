@@ -1,0 +1,20 @@
+{
+  "name": "Steve",
+  "prefession": "Software Engineer",
+  "age": 30,
+  "residence": "Uzbekistan",
+  "address": "S.Korea",
+  "languages": ["Uzbek", "English", "Korean"],
+  "skills": ["HTML", "CSS", "JS", "NodeJs", "PHP"],
+  "extra skills": ["Bootstrap, Materialize", "Styling SASS", "Django Flask", "GIT knowledge"],
+  "workplace": "IT company",
+  "service desk": "We offer you to use our programm in order to improve and enhance your business, and earn more money!",
+  "about_me": "I was born in Khorezm in Urgench cit along time ago :)",
+  "city": "Urgench",
+  "title": ["Flower", "Seedlings", "Gardener", "Old", "New"],
+  "flower_desk": ["What is a flower?", "What is seedlings", "Who is gardener"],
+  "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossom"],
+  "flower_price": ["15$", "25$", "12$", "20$", "35$", "30$", "22$", "19$", "9$"],
+  "famous_words": ["World is beautiful with flowers!"],
+  "famous_name": ["Al-Khorezmiy"]
+}
