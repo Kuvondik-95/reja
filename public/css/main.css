@@ -197,12 +197,53 @@ padding-left: 56px;
 padding-bottom:63px;
 margin-bottom: 140px;
 display: flex;
-/* position: absolute; */
 
 .main-text{
 width: 50%;
 box-sizing: border-box;
 margin-top: 50px;
+/* position: relative; */
+}
+
+.circle-yellow{
+  position: absolute;
+  top: 40px;
+  left: 850px;
+}
+
+.circle-yellow{
+  position: absolute;
+  top: 65px;
+  right: 700px;
+}
+
+.circle-green{
+  position: absolute;
+  top: 420px;
+  left: 880px;
+}
+
+.circle-green-2{
+  position: absolute;
+  top: 65px;
+  right: 1000px;
+}
+.rectangular-blue-2{
+  position: absolute;
+  top: 60px;
+  right: 680px;
+}
+
+.rectangular-blue{
+  position: absolute;
+  top: 330px;
+  left: 1180px;
+}
+
+.triangle-red{
+  position: absolute;
+  top: 420px;
+  right: 620px;
 }
 
 h1{
