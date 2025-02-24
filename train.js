@@ -85,22 +85,39 @@ const list = [
 
 
 // A-TASK MIT24 
-function countLetter(word, letter ){
+// function countLetter(word, letter ){
+//   let summ = 0;
+//   if(typeof word !== 'string' && typeof letter !== 'string'){
+//     console.log("Please, insert a string!");
+//   }else{
+//     const myWord = word.split("");
+//     for(let i=0; i < myWord.length; i++){
+//       if(myWord[i] === letter){
+//         summ ++;
+//       }
+//     }
+//   }
+//    console.log(summ);
+// }
+
+function countLetter(word, letter, callback){
   let summ = 0;
-  if(typeof word !== 'string' && typeof letter !== 'string'){
-    console.log("Please, insert a string!")
-  }else{
+  if(typeof word !== 'string' || typeof letter !== 'string') callback("Please, insert a string!", null);
+  else{
     const myWord = word.split("");
     for(let i=0; i < myWord.length; i++){
       if(myWord[i] === letter){
         summ ++;
       }
     }
+    callback(null, summ);
   }
-   console.log(summ);
 }
 
-countLetter('mashina', 'a');
+countLetter('mashina', 'a', (err, data)=>{
+  if(err) console.log('ERROR:', err);
+  else console.log(data);
+});
 
 // run("a", "alabay", (err, data) => {
 //   if(err) console.log('ERROR:', err);

@@ -51,7 +51,7 @@ app.get("/", function(req, res){
 const server = http.createServer(app);
 let port = 3000;
 server.listen(port, function(){
-  console.log(`Server is running succesfully on port ${port} `)
+  console.log(`Server is running succesfully on port ${port}, http://localhost:${port} `)
 });
 
 
