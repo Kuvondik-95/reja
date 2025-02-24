@@ -1,4 +1,102 @@
-console.log('Train task is running on!')
+console.log('Train task is running on! It is B-TASK')
+// B-TASK: 
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini
+// bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+async function countDigits(text){
+  if(typeof text !== 'string') throw new Error("Please insert a string");
+  else {
+    let summ = 0;
+    const myText = text.split("");
+    myText.map((item)=>{
+      if(!isNaN(item)){
+        summ++;
+      }    
+    })
+
+    return summ;
+  }
+}
+
+
+const str = "s2ff3";
+// const str = 3; // for checking ERROR
+
+countDigits(str)
+  .then((data)=>{
+    console.log(data);
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // A-TASK MIT24 
+// function countLetter(word, letter, callback){
+//   let summ = 0;
+//   if(typeof word !== 'string' || typeof letter !== 'string') callback("Please, insert a string!", null);
+//   else{
+//     const myWord = word.split("");
+//     for(let i=0; i < myWord.length; i++){
+//       if(myWord[i] === letter){
+//         summ ++;
+//       }
+//     }
+//     callback(null, summ);
+//   }
+// }
+
+// countLetter('mashina', 'a', (err, data)=>{
+//   if(err) console.log('ERROR:', err);
+//   else console.log(data);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const cpus = require("os"); //Computer yadrosi nechta ekanlikini bilib olsa bo'ladi.
 // console.log(cpus); 
 
@@ -81,51 +179,3 @@ const list = [
 // run();
 
 // console.log('passed here 1');
-
-
-
-// A-TASK MIT24 
-// function countLetter(word, letter ){
-//   let summ = 0;
-//   if(typeof word !== 'string' && typeof letter !== 'string'){
-//     console.log("Please, insert a string!");
-//   }else{
-//     const myWord = word.split("");
-//     for(let i=0; i < myWord.length; i++){
-//       if(myWord[i] === letter){
-//         summ ++;
-//       }
-//     }
-//   }
-//    console.log(summ);
-// }
-
-function countLetter(word, letter, callback){
-  let summ = 0;
-  if(typeof word !== 'string' || typeof letter !== 'string') callback("Please, insert a string!", null);
-  else{
-    const myWord = word.split("");
-    for(let i=0; i < myWord.length; i++){
-      if(myWord[i] === letter){
-        summ ++;
-      }
-    }
-    callback(null, summ);
-  }
-}
-
-countLetter('mashina', 'a', (err, data)=>{
-  if(err) console.log('ERROR:', err);
-  else console.log(data);
-});
-
-// run("a", "alabay", (err, data) => {
-//   if(err) console.log('ERROR:', err);
-//   else{
-//     console.log(data);
-//   }
-// })
-
-// run();
-// if(typeof letter !== "string" &&) callback("insert a number", null);
-// else if (typeof word !== "string") callback("insert a number", null);
