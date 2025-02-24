@@ -37,11 +37,31 @@ app.get("/author", function(req, res){
 
 app.post("/create-item", function(req, res){
   console.log(req.body);
-  res.json({test:"success"});
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({reja: new_reja}, (err, data)=>{
+    if(err){
+      console.log(err);
+      res.end("Something went wrong!");
+    }else{
+      res.end("Successfully added!");
+    }
+  })
+  // res.json({test:"success"});
 })
 
 app.get("/", function(req, res){
-    res.render("harid");
+  console.log("User entered to /")
+  db.collection("plans")
+  .find()
+  .toArray((err, data)=>{
+    if(err){
+      console.log("Error:", err)
+      res.end("Something went wrong!")
+    } 
+    else {
+      res.render("reja", {items: data});
+    }
+  })  
 })
 
 module.exports = app;
