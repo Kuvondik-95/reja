@@ -17,6 +17,7 @@
 
           <div class="col-md-9">
             <input 
+            id="create-field"
             type="text" 
             name="reja" 
             autofocus autocomplete="off" 
@@ -30,7 +31,7 @@
 
         </div><!--.row-->
         
-        <div class="row mt-4 g-2"  style="padding: 20px; background-color: rgb(237, 237, 237); border-radius: 8px; width: 80%; margin: auto;">
+        <div id="item-list" class="row mt-4 g-2"  style="padding: 20px; background-color: rgb(237, 237, 237); border-radius: 8px; width: 80%; margin: auto;">
           <% items.map(function(item) { %>
             <div class="col-md-10 border"><%=item.reja%></div>
             <div class="col-md-1 border"><button class="edit-btn btn btn-success" data-id="<%=item._id%>">Edit</button></div>
@@ -40,5 +41,8 @@
     </form>
   </div><!--.container-->
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/browser.js"></script>
 </body>
 </html>
