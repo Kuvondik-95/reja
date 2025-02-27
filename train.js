@@ -6,7 +6,28 @@ console.log('Train task is running on! It is B-TASK')
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
 
+async function checkContent(word1, word2){
+  if(typeof word1 !== 'string' || typeof word2 !== 'string') throw new Error("Please insert only a word!");
+  else{
+    let check_string = true;
+    const myWord1 = word1.split("").sort();
+    const myWord2 = word2.split("").sort();
 
+    if(JSON.stringify(myWord1) === JSON.stringify(myWord2)){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+
+checkContent("mitgroup", "gmtiprou")
+.then((data) => {
+  console.log(data);
+})
+.catch((err) => {
+  console.log(err);
+});
 
 
 
@@ -34,32 +55,32 @@ console.log('Train task is running on! It is B-TASK')
 // bizga return qilsin.
 // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
-async function countDigits(text){
-  if(typeof text !== 'string') throw new Error("Please insert a string");
-  else {
-    let summ = 0;
-    const myText = text.split("");
-    myText.map((item)=>{
-      if(!isNaN(item)){
-        summ++;
-      }    
-    })
+// async function countDigits(text){
+//   if(typeof text !== 'string') throw new Error("Please insert a string");
+//   else {
+//     let summ = 0;
+//     const myText = text.split("");
+//     myText.map((item)=>{
+//       if(!isNaN(item)){
+//         summ++;
+//       }    
+//     })
 
-    return summ;
-  }
-}
+//     return summ;
+//   }
+// }
 
 
-const str = "s2ff3";
-// const str = 3; // for checking ERROR
+// const str = "s2ff3";
+// // const str = 3; // for checking ERROR
 
-countDigits(str)
-  .then((data)=>{
-    console.log(data);
-  })
-  .catch((err)=>{
-    console.log(err);
-  })
+// countDigits(str)
+//   .then((data)=>{
+//     console.log(data);
+//   })
+//   .catch((err)=>{
+//     console.log(err);
+//   })
 
 
 
