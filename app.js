@@ -60,7 +60,6 @@ app.post("/delete-item", (req, res)=>{
 
 
 app.get("/", function(req, res){
-  console.log("User entered to /")
   db.collection("plans")
   .find()
   .toArray((err, data)=>{
