@@ -11,6 +11,7 @@
   
   <div class="container text-center">
     <h1 class="mt-4 mb-4"> REJA VA MAQSADLAR </h1>
+      
     <form id="create-form" action="/create-item" method="POST">
 
         <div class="row"  style="padding: 20px; background-color: rgb(237, 237, 237); border-radius: 8px; width: 80%; margin: auto;">
@@ -26,19 +27,28 @@
           </div><!--.col-->
 
           <div class="col-md-3">
-            <button class="btn btn-primary" style="width: 100%; padding:5px; border-radius: 4px;">Yangi reja qo'shish</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding:5px; border-radius: 4px;">Yangi reja qo'shish</button>
           </div><!--.col-->
 
         </div><!--.row-->
+
+      </form>
         
-        <div id="item-list" class="row mt-4 g-2"  style="padding: 20px; background-color: rgb(237, 237, 237); border-radius: 8px; width: 80%; margin: auto;">
-          <% items.map(function(item) { %>
-            <div class="col-md-10 border"><%=item.reja%></div>
-            <div class="col-md-1 border"><button class="edit-btn btn btn-success" data-id="<%=item._id%>">Edit</button></div>
-            <div class="col-md-1 border"><button class="edit-btn btn btn-danger" data-id="<%=item._id%>">Delete</button></div>    
-          <% }) %>
+        <div class="list-container" style="">
+          <ul class="list-group" id="item-list" style="background-color: rgb(237, 237, 237); border-radius: 6px;">
+            <% items.map(function(item) { %>
+              <li class="list-group-item">
+                <span class="" ><%=item.reja%></span>
+                <span style="float: right;">
+                  <button class="edit-me btn btn-success" data-id="<%=item._id%>">Edit</button>
+                  <button class="delete-me btn btn-danger" data-id="<%=item._id%>">Delete</button>
+                </span>
+              </li>
+            <% }) %>
+          </ul>
         </div>
-    </form>
+
+    
   </div><!--.container-->
 
 

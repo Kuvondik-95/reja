@@ -9,7 +9,9 @@ const http = require('http');
 
 
 // MongoDB ni chaqirish
-const db = require("./server").db();
+const client = require("./server"); 
+const db = client.db();
+const mongodb = require("mongodb");
 
 
 
@@ -44,6 +46,18 @@ app.post("/create-item", function(req, res){
   })
   // res.json({test:"success"});
 })
+
+
+app.post("/delete-item", (req, res)=>{
+  const id = req.body.id;
+  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data){
+    res.json({state: "success"});
+  })
+});
+
+
+
+
 
 app.get("/", function(req, res){
   console.log("User entered to /")
