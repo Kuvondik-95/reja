@@ -10,7 +10,8 @@ const http = require('http');
 
 // MongoDB ni chaqirish
 const client = require("./server"); 
-const db = client.db();
+const db = client.db();   // Bu yerda db() metodi bizga object qaytaradi va uni metodlaridan foydalanib database ga 
+                          // -- CRUD amallarini bajarishimiz mumkin bo'ladi.
 const mongodb = require("mongodb");
 
 
@@ -56,6 +57,23 @@ app.post("/delete-item", (req, res)=>{
 });
 
 
+app.post("/edit-item", (req, res) =>{
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate({_id: new mongodb.ObjectId(data.id)}, {$set: {reja: data.new_input}}, 
+  (err, data) => {
+    res.json({state: "success"});
+  })
+})
+
+app.post("/delete-all" , (req, res) => {
+  if(req.body.delete_all){
+    db.collection("plans").deleteMany(function() {
+      res.json( {state: "Hamma rejalar o\'chirildi"});
+    })
+  }
+})
+
 
 
 
@@ -72,6 +90,10 @@ app.get("/", function(req, res){
     }
   })  
 })
+
+
+
+
 
 module.exports = app;
 

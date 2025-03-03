@@ -44,6 +44,28 @@ document.addEventListener("click", (e)=>{
   
   // edit operations
   if(e.target.classList.contains("edit-me")){
-    
+    let userInput = prompt("O\'zgartirishni kiriting", e.target.parentElement.parentElement.querySelector('.item-text').innerHTML);
+
+    if(userInput){
+      console.log(userInput);
+      axios.post("/edit-item", 
+        {id: e.target.getAttribute("data-id"), 
+         new_input: userInput})
+      .then(response => {
+        console.log(response.data);
+        e.target.parentElement.parentElement.querySelector('.item-text').innerHTML = userInput;
+      })
+      .catch(err => {
+        console.log(err);
+        console.log("Iltimos qaytadan urinib ko'ring")
+      })
+    }
   }
+})
+
+document.getElementById('clean-all').addEventListener("click", () =>{
+  axios.post("/delete-all", {delete_all: true}).then(response => {
+    alert(response.data.state);
+    document.location.reload();
+  })
 })

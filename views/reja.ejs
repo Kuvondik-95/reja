@@ -38,7 +38,7 @@
           <ul class="list-group" id="item-list" style="background-color: rgb(237, 237, 237); border-radius: 6px;">
             <% items.map(function(item) { %>
               <li class="list-group-item">
-                <span class="" ><%=item.reja%></span>
+                <span class="item-text" ><%=item.reja%></span>
                 <span style="float: right;">
                   <button class="edit-me btn btn-success" data-id="<%=item._id%>">Edit</button>
                   <button class="delete-me btn btn-danger" data-id="<%=item._id%>">Delete</button>
@@ -48,6 +48,11 @@
           </ul>
         </div>
 
+        <div class="list-container" style="">
+          <div class="d-flex justify-content-end">
+              <button class="btn btn-danger me-4" id="clean-all">Delete All</button>          
+          </div>
+        </div>
     
   </div><!--.container-->
 
