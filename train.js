@@ -1,4 +1,65 @@
-console.log('Train task is running on! It is B-TASK')
+console.log('Train js is running on! It is D-TASK')
+const moment = require("moment");
+// D-TASK: 
+
+// Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
+// MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+class Shop{
+  #non;
+  #lagmon;
+  #cola;
+
+  constructor(non, lagmon, cola){
+    this.#non = non;
+    this.#lagmon = lagmon;
+    this.#cola = cola;
+  }
+
+  qoldiq(){
+    console.log(`Hozir ${moment().format("DD-MM-YYYY hh:mm")} da non ${this.#non}ta, lagmon ${this.#lagmon}ta, cola ${this.#cola}ta bor`)
+  }
+
+  sotish(str, amount){
+    if(str === 'non'){
+      this.#non -= amount;
+    }else if(str === 'lagmon'){
+      this.#lagmon -= amount;
+    }else if(str === 'cola'){
+      this.#cola -= amount;
+    }
+  }
+
+  qabul(str, amount){
+    if(str === 'non'){
+      this.#non += amount;
+    }else if(str === 'lagmon'){
+      this.#lagmon += amount;
+    }else if(str === 'cola'){
+      this.#cola += amount;
+    }
+  }
+
+}
+
+const my_shop = new Shop(4, 5, 6);
+
+my_shop.qoldiq();
+my_shop.qabul('non', 3);
+my_shop.qoldiq();
+my_shop.sotish('cola', 4);
+my_shop.sotish('lagmon', 2);
+my_shop.qoldiq();
+
+
+
+
+
+
+
+
+
+
 
 // C-TASK: 
 
@@ -6,38 +67,28 @@ console.log('Train task is running on! It is B-TASK')
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
 
-async function checkContent(word1, word2){
-  if(typeof word1 !== 'string' || typeof word2 !== 'string') throw new Error("Please insert only a word!");
-  else{
-    let check_string = true;
-    const myWord1 = word1.split("").sort();
-    const myWord2 = word2.split("").sort();
+// async function checkContent(word1, word2){
+//   if(typeof word1 !== 'string' || typeof word2 !== 'string') throw new Error("Please insert only a word!");
+//   else{
+//     let check_string = true;
+//     const myWord1 = word1.split("").sort();
+//     const myWord2 = word2.split("").sort();
 
-    if(JSON.stringify(myWord1) === JSON.stringify(myWord2)){
-      return true;
-    }else{
-      return false;
-    }
-  }
-}
+//     if(JSON.stringify(myWord1) === JSON.stringify(myWord2)){
+//       return true;
+//     }else{
+//       return false;
+//     }
+//   }
+// }
 
-checkContent("mitgroup", "gmtiprou")
-.then((data) => {
-  console.log(data);
-})
-.catch((err) => {
-  console.log(err);
-});
-
-
-
-
-
-
-
-
-
-
+// checkContent("mitgroup", "gmtiprou")
+// .then((data) => {
+//   console.log(data);
+// })
+// .catch((err) => {
+//   console.log(err);
+// });
 
 
 

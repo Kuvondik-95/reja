@@ -14,7 +14,7 @@ function itemTemplate(item){
 
 
 document.getElementById("create-form").addEventListener("submit", (e)=>{
-  e.preventDefault();
+  e.preventDefault();  // traditional API ni o'chirib beradi
   axios.post("/create-item", {reja: createField.value})
   .then((response)=>{
     document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data));
@@ -29,11 +29,15 @@ document.getElementById("create-form").addEventListener("submit", (e)=>{
 
 document.addEventListener("click", (e)=>{
   
+  console.log(e.target);
   // delete operations
   if(e.target.classList.contains("delete-me")){
+    
     if(confirm("Aniq ochirmoqchimisiz?")){
-      axios.post("delete-item", {id: e.target.getAttribute("data-id")})
+      console.log("STEP-1 Frontend dan backend ga request ketdi.")
+      axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
       .then((response) => {
+        console.log("STEP-6. Backend dan kelgan data ni response qismda qabul qilamiz.");
         e.target.parentElement.parentElement.remove();
       }).catch((err) => {
         console.log("Iltimos qaytadan urinib ko'ring")

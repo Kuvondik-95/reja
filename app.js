@@ -38,7 +38,7 @@ app.get("/author", function(req, res){
 })
 
 
-app.post("/create-item", function(req, res){
+app.post("/create-item", function(req, res){      // endPoint /create-item
   console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({reja: new_reja}, (err, data)=>{
@@ -50,9 +50,16 @@ app.post("/create-item", function(req, res){
 
 
 app.post("/delete-item", (req, res)=>{
+  console.log("STEP-2. Frontend dan backend ga request keldi.")
   const id = req.body.id;
+  console.log("id:", id);
+
+  console.log("STEP-3. Servergan DATABASE ga kirish");
   db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data){
+    console.log("STEP-4. DATAbasedan serverga ma'lumot keldi.");
+    // res.end("Delete bo'ldi");
     res.json({state: "success"});
+    console.log("STEP-5. Serverdan Frontend ga malumot jonatish");
   })
 });
 
